@@ -26,63 +26,79 @@ public class Main {
 
 
         // définir le montant total de l'addition -total-
-       float total = 0;
+
+        float total = 0;
 
        // definir le tableau des plats -tplat-
+
         String tplat[] = new String[nblignes];
 
         // definir le tableau des prix -tprix-
+
         float tprix[] = new float[nblignes];
 
         // definir le tableau des quantités -tqt-
+
         int tqt[] = new int[nblignes];
 
         // definir le compteur d'index des tableaux -i-
+
         int i = 0;
 
 
         // consever le nombre de lignes pour le ticket -nbfinlignes
+
         int nbfinlignes = nblignes;
 
         // début de la boucle
+
         nblignes = (nblignes - 1);
+
         while (nblignes>= 0)
         {
             // On demande le nom du plat -plat-
+
             System.out.println(" ");
             System.out.println(" ");
             System.out.println(" **********");
             System.out.println(" ");
-        System.out.println("Entrez le nom de l'article : ");
+            System.out.println("Entrez le nom de l'article : ");
             String plat = sc.nextLine();
 
             // On demande la quantité de plats -qt-
+
             System.out.println("indiquez le nombre de " + plat);
             int qt = sc.nextInt();
             sc.nextLine();
 
             // on demande le prix unitaire du plat -prix-
+
             System.out.println("indiquez le prix unitaire de " + plat);
             float prix = sc.nextFloat();
             sc.nextLine();
 
             // On donne le total de la ligne -ttligne-
+
             float ttligne = prix * qt;
             System.out.println("            le total pour cet article est de " + ttligne + "Eur");
             System.out.println(" ");
 
             // decompter la ligne;
+
             nblignes = nblignes - 1;
 
             // incrementer le total
+
             total = total + ttligne;
 
             // enregistrer dans le tableau
+
             tplat[i] = plat;
             tqt[i]=qt;
             tprix[i]=prix;
 
             // incrementer l'index'
+
             i = (i+1);
 
         }
